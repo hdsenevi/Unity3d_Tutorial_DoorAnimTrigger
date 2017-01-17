@@ -7,7 +7,7 @@ public class InputHandler : MonoBehaviour
 	{
 		if(Input.GetMouseButton(0))
 		{
-			Ray ray = Camera.mainCamera.ScreenPointToRay(Input.mousePosition);
+			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit rayCastHit;
 			
 			if(Physics.Raycast(ray.origin, ray.direction, out rayCastHit, Mathf.Infinity))

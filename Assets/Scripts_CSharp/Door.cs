@@ -7,16 +7,16 @@ public class Door : MonoBehaviour {
 	
 	public void PlayDoorAnim () 
 	{
-		if(!animation.isPlaying)
+		if(!GetComponent<Animation>().isPlaying)
 		{
 			if(m_LastIndex == 0)
 			{
-				animation.Play("DoorOpen");
+				GetComponent<Animation>().Play("DoorOpen");
 				m_LastIndex = 1;
 			}
 			else 
 			{
-				animation.Play("DoorClose");
+				GetComponent<Animation>().Play("DoorClose");
 				m_LastIndex = 0;
 			}
 		}
